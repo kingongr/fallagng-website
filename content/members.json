@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Brams",
+    "role": "Singer",
+    "shortBio": "",
+    "headshot": "/images/members/brams/DSCF2294.jpg",
+    "carousel": [
+      "/images/members/brams/DSCF2294.jpg",
+      "/images/members/brams/DSCF2295.jpg",
+      "/images/members/brams/DSCF2296.jpg",
+      "/images/members/brams/DSCF2300.jpg"
+    ],
+    "socials": {
+      "instagram": "b.akens"
+    }
+  },
+  {
+    "name": "CJ",
+    "role": "Singer & Producer",
+    "shortBio": "",
+    "headshot": "/images/members/cj/DSCF2286.jpg",
+    "carousel": [
+      "/images/members/cj/DSCF2286.jpg",
+      "/images/members/cj/DSCF2319.jpg",
+      "/images/members/cj/DSCF2325.jpg"
+    ],
+    "socials": {
+      "instagram": "cj_ame"
+    }
+  },
+  {
+    "name": "Melo",
+    "role": "Singer",
+    "shortBio": "",
+    "headshot": "/images/members/melo/DSCF2305 copy.jpg",
+    "carousel": [
+      "/images/members/melo/DSCF2305 copy.jpg",
+      "/images/members/melo/DSCF2329 copy.jpg",
+      "/images/members/melo/DSCF2331.jpg",
+      "/images/members/melo/DSCF2484.jpg"
+    ],
+    "socials": {
+      "instagram": "melo.nyams"
+    }
+  },
+  {
+    "name": "Meezus",
+    "role": "Singer & Producer",
+    "shortBio": "",
+    "headshot": "/images/members/meezus/DSCF2305.jpg",
+    "carousel": [
+      "/images/members/meezus/DSCF2305.jpg",
+      "/images/members/meezus/DSCF2337.jpg",
+      "/images/members/meezus/DSCF2458.jpg",
+      "/images/members/meezus/DSCF2471.jpg"
+    ],
+    "socials": {
+      "instagram": "meezus_the_flexx"
+    }
+  },
+  {
+    "name": "Ralph",
+    "role": "DJ",
+    "shortBio": "",
+    "headshot": "/images/members/ralph/DSCF2440.jpg",
+    "carousel": [
+      "/images/members/ralph/DSCF2440.jpg"
+    ],
+    "socials": {
+      "instagram": "kingongr.eth"
+    }
+  }
+]

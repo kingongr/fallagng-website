@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "home": "Home",
+    "collective": "Collective",
+    "watch": "Watch",
+    "listen": "Listen"
+  },
+  "hero": {
+    "title": "FALLAGNG",
+    "subtitle": "The Wait Is Over"
+  },
+  "cta": {
+    "listen": "Listen",
+    "watch": "Watch"
+  },
+  "collective": {
+    "title": "The Collective",
+    "heroTitle": "The Collective",
+    "ethos": {
+      "title": "Our Code",
+      "word": "FALLA",
+      "pronunciation": "[fa.la] - verb (slang)",
+      "definition": "State of mind of someone who is searching for themselves, who fights daily to make it through, no matter the means"
+    },
+    "pillars": {
+      "craft": {
+        "title": "Craft",
+        "description": "Meticulous attention to detail in every composition, production, and performance. We honor the art of sound design."
+      },
+      "community": {
+        "title": "Community",
+        "description": "Building connections through music. We foster a space where artists and listeners come together as one."
+      },
+      "continuum": {
+        "title": "Continuum",
+        "description": "Evolving while staying true to our roots. We bridge past and future, tradition and innovation."
+      }
+    },
+    "members": {
+      "all": "All",
+      "filterByRole": "Filter members by role",
+      "showAll": "Show all members",
+      "noMembers": "No members found",
+      "noMembersForRole": "No members found for this role.",
+      "filterBy": "Filter by"
+    },
+    "roles": {
+      "singer": "Singer",
+      "producer": "Producer",
+      "dj": "DJ",
+      "singerProducer": "Singer & Producer"
+    }
+  },
+  "videos": {
+    "title": "Watch",
+    "description": "Explore our latest music videos, live performances, behind-the-scenes content, and visual stories.",
+    "videosSection": {
+      "title": "Videos",
+      "description": "Watch our latest music videos, live performances, and behind-the-scenes content."
+    },
+    "picturesSection": {
+      "title": "Pictures",
+      "description": "Explore our latest photos and visual content."
+    },
+    "sections": {
+      "videos": "Videos",
+      "pictures": "Pictures"
+    },
+    "latestVideo": {
+      "title": "Latest Video",
+      "description": "Watch our most recent performance and behind-the-scenes content"
+    },
+    "upcomingEvent": {
+      "title": "Upcoming Event",
+      "description": "New music and tour dates coming soon. Stay tuned for announcements"
+    },
+    "ourCode": {
+      "title": "Our Code",
+      "description": "Learn about our collective, our mission, and what drives our sound"
+    },
+    "close": "Close",
+    "viewAllVideos": "View all videos"
+  },
+  "listen": {
+    "title": "Listen",
+    "description": "Stream our music on your favorite platform",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied!",
+    "openPlatform": "Open",
+    "platformNotes": {
+      "spotify": "Stream our latest releases",
+      "apple": "Available on Apple Music",
+      "tidal": "Stream on TIDAL",
+      "deezer": "Listen on Deezer",
+      "youtube": "Subscribe for new content"
+    }
+  },
+  "footer": {
+    "manifesto": "241 x 225. A music collective pushing boundaries and creating sounds that resonates with the African Diaspora. Crafting experiences that move both body and soul.",
+    "navigation": "Navigation",
+    "connect": "Connect",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact",
+    "followUs": "Follow us on"
+  },
+  "common": {
+    "skipToContent": "Skip to content",
+    "sectionNavigation": "Section navigation",
+    "ariaLabels": {
+      "home": "FALLAGNG - Home",
+      "mainNav": "Main navigation",
+      "footerNav": "Footer navigation",
+      "legal": "Legal",
+      "switchToFrench": "Switch to French",
+      "switchToEnglish": "Switch to English",
+      "openPlatform": "Open platform",
+      "copyLink": "Copy link"
+    }
+  },
+  "language": {
+    "en": "EN",
+    "fr": "FR"
+  }
+}
+

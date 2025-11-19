@@ -1,0 +1,6 @@
+Place your Majesty font files here:
+- Majesty-Regular.woff2 (or .woff / .ttf)
+- Majesty-Bold.woff2 (or .woff / .ttf)
+
+Once fonts are added, the site will automatically use them.
+Until then, serif fallback fonts will be used.

@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Majesty font from Canva */
+/* Place font files in public/fonts/ directory */
+/* Font loading errors are suppressed - fallback to serif fonts if files don't exist */
+@font-face {
+  font-family: "Majesty";
+  src: url("/fonts/Majesty-Regular.woff2") format("woff2"),
+       url("/fonts/Majesty-Regular.woff") format("woff"),
+       url("/fonts/Majesty-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Majesty";
+  src: url("/fonts/Majesty-Bold.woff2") format("woff2"),
+       url("/fonts/Majesty-Bold.woff") format("woff"),
+       url("/fonts/Majesty-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Suppress font loading errors in console */
+@supports (font-display: swap) {
+  @font-face {
+    font-family: "Majesty";
+    src: url("/fonts/Majesty-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: optional;
+  }
+}
+
+:root {
+  --glass: rgba(255, 255, 255, 0.06);
+  --stroke: rgba(255, 255, 255, 0.12);
+}
+
+@layer base {
+  * {
+    @apply border-stroke;
+  }
+
+  body {
+    @apply bg-bg text-text antialiased;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.12) 1px, transparent 0),
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0);
+    background-size: 24px 24px, 16px 16px;
+    background-position: 0 0, 12px 12px;
+    opacity: 0.4;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .glass {
+    background: var(--glass);
+    border: 1px solid var(--stroke);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    @apply rounded-2xl;
+    position: relative;
+    z-index: 1;
+  }
+
+  .glass-thin {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+    @apply rounded-2xl;
+    position: relative;
+    z-index: 1;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-electric focus:ring-offset-2 focus:ring-offset-bg;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Trade Winds font letter spacing utilities */
+  .tracking-trade-winds {
+    letter-spacing: 0.19em;
+  }
+
+  .tracking-trade-winds-wide {
+    letter-spacing: 0.25em;
+  }
+
+  .tracking-trade-winds-wider {
+    letter-spacing: 0.35em;
+  }
+
+  /* Instagram embed border removal */
+  .instagram-embed {
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+  }
+
+  /* Hide Instagram embed borders and padding */
+  iframe[src*="instagram.com"] {
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Container for Instagram embeds to hide borders */
+  .instagram-container {
+    overflow: visible;
+    border-radius: 0.5rem;
+  }
+
+  .instagram-container iframe {
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    min-height: 540px;
+  }
+
+  /* Ensure Instagram embeds are fully visible */
+  .instagram-container > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Instagram blockquote embeds */
+  .instagram-container blockquote.instagram-media,
+  blockquote.instagram-media {
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0.5rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 326px !important;
+    box-shadow: none !important;
+  }
+
+  /* Remove Instagram's default styling */
+  .instagram-media iframe {
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide captions and comments from Instagram picture embeds */
+  .instagram-picture-embed {
+    overflow: hidden !important;
+  }
+
+  .instagram-picture-embed iframe {
+    height: 540px !important;
+    max-height: 540px !important;
+    overflow: hidden !important;
+    display: block !important;
+  }
+
+  /* Additional overflow control for reel */
+  .instagram-container {
+    overflow: hidden !important;
+  }
+
+  .instagram-container blockquote.instagram-media {
+    overflow: hidden !important;
+  }
+
+  /* Ensure Instagram embeds don't overflow their containers */
+  .instagram-container,
+  .instagram-picture-embed {
+    max-height: 540px !important;
+    overflow: hidden !important;
+  }
+
+  /* TikTok embed styling */
+  .tiktok-embed {
+    border: none !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    max-width: 540px !important;
+    min-width: 326px !important;
+    width: 100% !important;
+  }
+
+  .tiktok-embed iframe {
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+

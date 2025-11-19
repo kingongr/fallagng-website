@@ -1,0 +1,32 @@
+[
+  {
+    "label": "Spotify",
+    "platform": "spotify",
+    "url": "https://open.spotify.com/track/1PEjau6NYXMfKeaGLSGo6L?si=6579c051ea604d2b&utm_medium=share&utm_source=linktree",
+    "note": "Stream our latest releases"
+  },
+  {
+    "label": "Apple Music",
+    "platform": "apple",
+    "url": "https://geo.music.apple.com/us/album/_/1825034681?app=music&at=1000lHKX&ct=linktree_http&i=1825034682&itscg=30200&itsct=lt_m&ls=1&mt=1",
+    "note": "Available on Apple Music"
+  },
+  {
+    "label": "TIDAL",
+    "platform": "tidal",
+    "url": "https://listen.tidal.com/track/446326851",
+    "note": "Stream on TIDAL"
+  },
+  {
+    "label": "Deezer",
+    "platform": "deezer",
+    "url": "https://link.deezer.com/s/30vpkdtO9bFvfJYI1IV3n",
+    "note": "Listen on Deezer"
+  },
+  {
+    "label": "YouTube",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/@fallagng",
+    "note": "Subscribe for new content"
+  }
+]

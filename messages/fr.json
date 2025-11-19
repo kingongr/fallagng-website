@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "collective": "Collectif",
+    "watch": "Regarder",
+    "listen": "Écouter"
+  },
+  "hero": {
+    "title": "FALLAGNG",
+    "subtitle": "L'Attente Est Terminée"
+  },
+  "cta": {
+    "listen": "Écouter",
+    "watch": "Regarder"
+  },
+  "collective": {
+    "title": "Le Collectif",
+    "heroTitle": "Le Collectif",
+    "ethos": {
+      "title": "Notre Code",
+      "word": "FALLA",
+      "pronunciation": "[fa.la] - verbe (argot)",
+      "definition": "État d'esprit de quelqu'un qui se cherche, qui se bat quotidiennement pour s'en sortir, peu importe les moyens"
+    },
+    "pillars": {
+      "craft": {
+        "title": "Artisanat",
+        "description": "Une attention méticuleuse aux détails dans chaque composition, production et performance. Nous honorons l'art du design sonore."
+      },
+      "community": {
+        "title": "Communauté",
+        "description": "Créer des liens à travers la musique. Nous favorisons un espace où les artistes et les auditeurs se réunissent comme un seul."
+      },
+      "continuum": {
+        "title": "Continuité",
+        "description": "Évoluer tout en restant fidèle à nos racines. Nous faisons le pont entre le passé et l'avenir, la tradition et l'innovation."
+      }
+    },
+    "members": {
+      "all": "Tous",
+      "filterByRole": "Filtrer les membres par rôle",
+      "showAll": "Afficher tous les membres",
+      "noMembers": "Aucun membre trouvé",
+      "noMembersForRole": "Aucun membre trouvé pour ce rôle.",
+      "filterBy": "Filtrer par"
+    },
+    "roles": {
+      "singer": "Chanteur",
+      "producer": "Producteur",
+      "dj": "DJ",
+      "singerProducer": "Chanteur & Producteur"
+    }
+  },
+  "videos": {
+    "title": "Regarder",
+    "description": "Découvrez nos derniers clips musicaux, performances live, contenus exclusifs et histoires visuelles.",
+    "videosSection": {
+      "title": "Vidéos",
+      "description": "Regardez nos derniers clips musicaux, performances live et contenus exclusifs."
+    },
+    "picturesSection": {
+      "title": "Photos",
+      "description": "Découvrez nos dernières photos et contenus visuels."
+    },
+    "sections": {
+      "videos": "Vidéos",
+      "pictures": "Photos"
+    },
+    "latestVideo": {
+      "title": "Dernière Vidéo",
+      "description": "Regardez notre dernière performance et nos contenus exclusifs"
+    },
+    "upcomingEvent": {
+      "title": "Événement à Venir",
+      "description": "Nouvelle musique et dates de tournée à venir. Restez à l'écoute pour les annonces"
+    },
+    "ourCode": {
+      "title": "Notre Code",
+      "description": "Découvrez notre collectif, notre mission et ce qui anime notre son"
+    },
+    "close": "Fermer",
+    "viewAllVideos": "Voir toutes les vidéos"
+  },
+  "listen": {
+    "title": "Écouter",
+    "description": "Écoutez notre musique sur votre plateforme préférée",
+    "copyLink": "Copier le lien",
+    "linkCopied": "Lien copié !",
+    "openPlatform": "Ouvrir",
+    "platformNotes": {
+      "spotify": "Écoutez nos dernières sorties",
+      "apple": "Disponible sur Apple Music",
+      "tidal": "Écoutez sur TIDAL",
+      "deezer": "Écoutez sur Deezer",
+      "youtube": "Abonnez-vous pour du nouveau contenu"
+    }
+  },
+  "footer": {
+    "manifesto": "241 x 225. Un collectif musical qui repousse les limites et crée des sons qui résonnent avec la Diaspora Africaine. Créer des expériences qui bougent le corps et l'âme.",
+    "navigation": "Navigation",
+    "connect": "Se Connecter",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "contact": "Contact",
+    "followUs": "Suivez-nous sur"
+  },
+  "common": {
+    "skipToContent": "Aller au contenu",
+    "sectionNavigation": "Navigation des sections",
+    "ariaLabels": {
+      "home": "FALLAGNG - Accueil",
+      "mainNav": "Navigation principale",
+      "footerNav": "Navigation du pied de page",
+      "legal": "Légal",
+      "switchToFrench": "Passer au français",
+      "switchToEnglish": "Passer à l'anglais",
+      "openPlatform": "Ouvrir la plateforme",
+      "copyLink": "Copier le lien"
+    }
+  },
+  "language": {
+    "en": "EN",
+    "fr": "FR"
+  }
+}
+

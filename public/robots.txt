@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Host
+Host: https://fallagng.com
+
+# Sitemaps
+Sitemap: https://fallagng.com/sitemap.xml
