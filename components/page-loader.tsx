@@ -87,8 +87,8 @@ export function PageLoader() {
       // Wait for all images to load
       await checkImagesLoaded();
 
-      // Minimum display time of 0.5s for smooth transition
-      const minDisplayTime = 500;
+      // Minimum display time of 2.5s to see the countdown
+      const minDisplayTime = 2500;
       const startTime = Date.now();
 
       await new Promise((resolve) => {
@@ -113,8 +113,8 @@ export function PageLoader() {
       // Wait for images to load on new page
       await checkImagesLoaded();
 
-      // Minimum display time of 0.5s
-      const minDisplayTime = 500;
+      // Minimum display time of 2.5s to see the countdown
+      const minDisplayTime = 2500;
       const startTime = Date.now();
 
       await new Promise((resolve) => {
