@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export const locales = ['en', 'fr'] as const;
-export const defaultLocale = 'en' as const;
+export const defaultLocale = 'fr' as const;
 
 export type Locale = typeof locales[number];
 

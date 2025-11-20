@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { fadeUp, staggerChildren } from "@/lib/motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { fadeUp, staggerChildren, jitter, continuousJitter } from "@/lib/motion";
 import { Hammer, Users, Infinity } from "lucide-react";
 import { useTranslations } from "@/hooks/use-translations";
 
@@ -37,15 +37,20 @@ export function Pillars() {
         >
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
+            const shouldReduceMotion = useReducedMotion();
             return (
               <motion.div
                 key={pillar.title}
                 variants={fadeUp}
                 className="glass p-8 text-center"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/10 text-gold mb-6">
+                <motion.div
+                  className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/10 text-gold mb-6"
+                  whileHover={shouldReduceMotion ? {} : jitter.hover}
+                  animate={shouldReduceMotion ? {} : continuousJitter}
+                >
                   <Icon className="w-8 h-8" aria-hidden="true" />
-                </div>
+                </motion.div>
                 <h3 className="text-2xl font-display font-semibold text-text mb-4">
                   {pillar.title}
                 </h3>

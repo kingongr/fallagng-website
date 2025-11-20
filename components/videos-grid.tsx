@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { fadeUp, staggerChildren } from "@/lib/motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { fadeUp, staggerChildren, subtleJitter, jitter } from "@/lib/motion";
 import { Video } from "@/lib/types";
 import { VideoEmbed } from "./video-embed";
 import { useState, useRef, useEffect } from "react";
@@ -14,6 +14,7 @@ interface VideosGridProps {
 }
 
 export function VideosGrid({ videos }: VideosGridProps) {
+  const shouldReduceMotion = useReducedMotion();
   const [playingVideoId, setPlayingVideoId] = useState<string | null>(null);
   const playingVideoRef = useRef<HTMLDivElement>(null);
 
@@ -78,13 +79,14 @@ export function VideosGrid({ videos }: VideosGridProps) {
           >
             {/* Close button for expanded videos */}
             {isExpanded && (
-              <button
+              <motion.button
                 onClick={handleVideoClose}
+                whileHover={shouldReduceMotion ? {} : jitter.hover}
                 className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/80 hover:bg-black/90 text-text transition-colors focus-ring"
                 aria-label="Close video"
               >
                 <X className="w-5 h-5" />
-              </button>
+              </motion.button>
             )}
             
             <VideoEmbed
@@ -95,9 +97,12 @@ export function VideosGrid({ videos }: VideosGridProps) {
               className="mb-4"
               onPlay={() => handleVideoPlay(`${video.platform}-${video.id}`, video.platform, video.title)}
             />
-            <h3 className="text-lg font-display font-semibold text-text mb-2">
+            <motion.h3
+              className="text-lg font-display font-semibold text-text mb-2"
+              whileHover={shouldReduceMotion ? {} : subtleJitter.hover}
+            >
               {video.title}
-            </h3>
+            </motion.h3>
             <p className="text-sm text-muted">
               {new Date(video.date).toLocaleDateString("en-US", {
                 year: "numeric",

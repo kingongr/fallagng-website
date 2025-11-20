@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { fadeUp, staggerChildren } from "@/lib/motion";
+import { fadeUp, staggerChildren, jitter, continuousJitter } from "@/lib/motion";
 import { Play, Calendar, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { VideoEmbed } from "./video-embed";
@@ -28,6 +28,7 @@ interface PanelProps {
 
 function Panel({ title, description, href, icon: Icon, image, imageAlt, index, videoId, platform, showTextInstead, textContent }: PanelProps) {
   const { t, locale } = useTranslations();
+  const shouldReduceMotion = useReducedMotion();
   const isVideoPanel = index === 0 && videoId && platform;
   const localeHref = href.startsWith('http') ? href : addLocaleToPath(href, locale);
 
@@ -52,9 +53,12 @@ function Panel({ title, description, href, icon: Icon, image, imageAlt, index, v
             />
           </div>
           <div className="flex items-start gap-3">
-            <div className="p-2 rounded-lg bg-electric/10 text-electric">
+            <motion.div
+              className="p-2 rounded-lg bg-electric/10 text-electric"
+              whileHover={shouldReduceMotion ? {} : jitter.hover}
+            >
               <Icon className="w-5 h-5" aria-hidden="true" />
-            </div>
+            </motion.div>
             <div className="flex-1">
               <h3 className="text-xl font-display font-semibold text-text mb-2">
                 {title}
@@ -74,9 +78,12 @@ function Panel({ title, description, href, icon: Icon, image, imageAlt, index, v
         <Link href={localeHref} className="block h-full focus-ring rounded-xl" aria-label={`View ${title}`} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}>
           {showTextInstead && textContent ? (
             <div className="relative aspect-video mb-4 rounded-lg overflow-hidden flex items-center justify-center">
-              <h2 className="text-6xl md:text-7xl font-permanent-marker text-electric text-center">
+              <motion.h2
+                className="text-6xl md:text-7xl font-permanent-marker text-electric text-center"
+                animate={shouldReduceMotion ? {} : continuousJitter}
+              >
                 {textContent}
-              </h2>
+              </motion.h2>
             </div>
           ) : image ? (
             <div className="relative aspect-video mb-4 rounded-lg overflow-hidden bg-surface">
@@ -95,9 +102,12 @@ function Panel({ title, description, href, icon: Icon, image, imageAlt, index, v
             </div>
           ) : null}
           <div className="flex items-start gap-3">
-            <div className="p-2 rounded-lg bg-electric/10 text-electric">
+            <motion.div
+              className="p-2 rounded-lg bg-electric/10 text-electric"
+              whileHover={shouldReduceMotion ? {} : jitter.hover}
+            >
               <Icon className="w-5 h-5" aria-hidden="true" />
-            </div>
+            </motion.div>
             <div className="flex-1">
               <h3 className="text-xl font-display font-semibold text-text mb-2 group-hover:text-electric transition-colors">
                 {title}

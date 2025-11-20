@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { fadeUp, staggerChildren } from "@/lib/motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { fadeUp, staggerChildren, jitter, subtleJitter } from "@/lib/motion";
 import { Link } from "@/lib/types";
 import {
   Music,
@@ -37,6 +37,7 @@ interface PlatformListProps {
 
 export function PlatformList({ links }: PlatformListProps) {
   const { t } = useTranslations();
+  const shouldReduceMotion = useReducedMotion();
   const [copiedUrl, setCopiedUrl] = useState<string | null>(null);
   
   // Get translated platform note
@@ -107,9 +108,12 @@ export function PlatformList({ links }: PlatformListProps) {
               aria-label={`${t.common.ariaLabels.openPlatform} ${link.label} - ${getPlatformNote(link.platform, link.note)}`}
             >
               {/* Platform Icon */}
-              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-surface/50 flex items-center justify-center">
+              <motion.div
+                className="flex-shrink-0 w-12 h-12 rounded-lg bg-surface/50 flex items-center justify-center"
+                whileHover={shouldReduceMotion ? {} : jitter.hover}
+              >
                 <Icon className="w-6 h-6 text-electric" aria-hidden="true" />
-              </div>
+              </motion.div>
 
               {/* Label and Note */}
               <div className="flex-1 min-w-0">
@@ -122,8 +126,9 @@ export function PlatformList({ links }: PlatformListProps) {
               {/* Actions */}
               <div className="flex items-center gap-2 flex-shrink-0">
                 {/* Copy Link Button */}
-                <button
+                <motion.button
                   onClick={(e) => handleCopy(link.url, link.platform, e)}
+                  whileHover={shouldReduceMotion ? {} : subtleJitter.hover}
                   className={cn(
                     "p-2 rounded-lg transition-colors focus-ring",
                     "text-muted hover:text-electric hover:bg-surface/50",
@@ -138,7 +143,7 @@ export function PlatformList({ links }: PlatformListProps) {
                   ) : (
                     <Copy className="w-4 h-4" aria-hidden="true" />
                   )}
-                </button>
+                </motion.button>
 
                 {/* Chevron */}
                 <ChevronRight

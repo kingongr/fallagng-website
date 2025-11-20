@@ -1,14 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Music, Video } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "@/hooks/use-translations";
 import { addLocaleToPath } from "@/lib/i18n";
+import { subtleJitter } from "@/lib/motion";
 
 export function CTACluster() {
   const { t, locale } = useTranslations();
+  const shouldReduceMotion = useReducedMotion();
   
   const ctaItems = [
     {
@@ -36,6 +38,7 @@ export function CTACluster() {
               key={item.href}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              whileHover={shouldReduceMotion ? {} : subtleJitter.hover}
               transition={{
                 delay: 1.4 + index * 0.1,
                 duration: 0.6,

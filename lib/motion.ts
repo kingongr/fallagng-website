@@ -79,3 +79,38 @@ export const parallaxConfig = {
   scrub: true,
 };
 
+// Jitter animation variants - subtle movement for enhanced interactivity
+export const jitter: Variants = {
+  hover: {
+    x: [0, -1, 1, -1, 1, 0],
+    y: [0, 1, -1, 1, -1, 0],
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
+    },
+  },
+};
+
+export const subtleJitter: Variants = {
+  hover: {
+    x: [0, 0.5, -0.5, 0],
+    y: [0, 0.5, -0.5, 0],
+    transition: {
+      duration: 0.2,
+      ease: "easeInOut",
+    },
+  },
+};
+
+// Continuous jitter animation for elements that should jitter while in view
+// Note: Should be used with useReducedMotion() hook to disable when needed
+export const continuousJitter = {
+  x: [0, 0.5, -0.5, 0.5, -0.5, 0],
+  y: [0, 0.5, -0.5, 0.5, -0.5, 0],
+  transition: {
+    duration: 2,
+    repeat: Infinity,
+    ease: "easeInOut",
+  },
+};
+

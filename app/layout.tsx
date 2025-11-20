@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { LocaleProvider } from "@/components/locale-provider";
+import { PageLoader } from "@/components/page-loader";
 import { defaultMetadata, defaultViewport } from "@/lib/metadata";
 import { defaultLocale } from "@/middleware";
 
@@ -37,6 +38,7 @@ export default function RootLayout({
   return (
     <html lang={defaultLocale} className={`${inter.variable} ${permanentMarker.variable}`} style={{ colorScheme: "dark" }}>
       <body className="font-sans">
+        <PageLoader />
         <LocaleProvider />
         <SmoothScroll>
           <SiteHeader />

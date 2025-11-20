@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Mouse } from "lucide-react";
 import Link from "next/link";
+import { subtleJitter } from "@/lib/motion";
 
 export function ScrollCue() {
   const shouldReduceMotion = useReducedMotion();
@@ -25,6 +26,7 @@ export function ScrollCue() {
               ? {}
               : {
                   y: [0, 8, 0],
+                  x: [0, 0.5, -0.5, 0.5, -0.5, 0],
                 }
           }
           transition={{

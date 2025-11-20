@@ -3,11 +3,12 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { fadeUp, scaleIn } from "@/lib/motion";
+import { fadeUp, scaleIn, jitter, subtleJitter } from "@/lib/motion";
 import { Member } from "@/lib/types";
 import { Instagram, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "@/hooks/use-translations";
+import { useReducedMotion } from "framer-motion";
 
 interface MembersGridProps {
   members: Member[];
@@ -197,6 +198,7 @@ function MemberRole({ role }: { role: string }) {
 }
 
 function MemberCard({ member, isHovered, onHover, onLeave }: MemberCardProps) {
+  const shouldReduceMotion = useReducedMotion();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const carouselImages = member.carousel || [member.headshot];
   const hasMultipleImages = carouselImages.length > 1;
@@ -314,9 +316,12 @@ function MemberCard({ member, isHovered, onHover, onLeave }: MemberCardProps) {
 
       {/* Name & Role - Always Visible */}
       <div className="mb-3">
-        <h3 className="text-xl font-display font-semibold text-text mb-1">
+        <motion.h3
+          className="text-xl font-display font-semibold text-text mb-1"
+          whileHover={shouldReduceMotion ? {} : subtleJitter.hover}
+        >
           {member.name}
-        </h3>
+        </motion.h3>
         <MemberRole role={member.role} />
       </div>
 
@@ -325,6 +330,7 @@ function MemberCard({ member, isHovered, onHover, onLeave }: MemberCardProps) {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          whileHover={shouldReduceMotion ? {} : jitter.hover}
           className="flex items-center justify-center"
         >
           <a
