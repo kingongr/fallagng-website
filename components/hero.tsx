@@ -200,7 +200,7 @@ export function Hero() {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="mb-12"
           >
-            <p className="text-xl md:text-2xl font-sans font-medium bg-gradient-to-r from-text via-text to-electric bg-clip-text text-transparent max-w-2xl mx-auto text-balance">
+            <p className="text-xl md:text-2xl font-allison font-medium bg-gradient-to-r from-text via-text to-electric bg-clip-text text-transparent max-w-2xl mx-auto text-balance">
               {t.hero.subtitle}
             </p>
           </motion.div>

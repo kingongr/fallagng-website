@@ -20,8 +20,10 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["Majesty", "serif", "Georgia", "Times New Roman"],
+        display: ["var(--font-merriweather)", "serif", "Georgia", "Times New Roman"],
         "permanent-marker": ["var(--font-permanent-marker)", "cursive", "serif"],
+        allison: ["var(--font-allison)", "cursive", "serif"],
+        merriweather: ["var(--font-merriweather)", "serif", "Georgia", "Times New Roman"],
       },
       spacing: {
         "8": "2rem",
