@@ -318,7 +318,7 @@ function MemberCard({ member, isHovered, onHover, onLeave }: MemberCardProps) {
       <div className="mb-3">
         <motion.h3
           className="text-xl font-display font-semibold text-text mb-1"
-          whileHover={shouldReduceMotion ? {} : subtleJitter.hover}
+          whileHover={shouldReduceMotion ? {} : subtleJitter.hover as any}
         >
           {member.name}
         </motion.h3>
@@ -330,7 +330,7 @@ function MemberCard({ member, isHovered, onHover, onLeave }: MemberCardProps) {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          whileHover={shouldReduceMotion ? {} : jitter.hover}
+          whileHover={shouldReduceMotion ? {} : jitter.hover as any}
           className="flex items-center justify-center"
         >
           <a

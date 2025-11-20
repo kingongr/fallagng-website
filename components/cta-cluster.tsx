@@ -38,7 +38,7 @@ export function CTACluster() {
               key={item.href}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              whileHover={shouldReduceMotion ? {} : subtleJitter.hover}
+              whileHover={shouldReduceMotion ? {} : subtleJitter.hover as any}
               transition={{
                 delay: 1.4 + index * 0.1,
                 duration: 0.6,

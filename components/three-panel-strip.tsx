@@ -55,7 +55,7 @@ function Panel({ title, description, href, icon: Icon, image, imageAlt, index, v
           <div className="flex items-start gap-3">
             <motion.div
               className="p-2 rounded-lg bg-electric/10 text-electric"
-              whileHover={shouldReduceMotion ? {} : jitter.hover}
+              whileHover={shouldReduceMotion ? {} : jitter.hover as any}
             >
               <Icon className="w-5 h-5" aria-hidden="true" />
             </motion.div>
@@ -104,7 +104,7 @@ function Panel({ title, description, href, icon: Icon, image, imageAlt, index, v
           <div className="flex items-start gap-3">
             <motion.div
               className="p-2 rounded-lg bg-electric/10 text-electric"
-              whileHover={shouldReduceMotion ? {} : jitter.hover}
+              whileHover={shouldReduceMotion ? {} : jitter.hover as any}
             >
               <Icon className="w-5 h-5" aria-hidden="true" />
             </motion.div>

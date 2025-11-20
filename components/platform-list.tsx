@@ -110,7 +110,7 @@ export function PlatformList({ links }: PlatformListProps) {
               {/* Platform Icon */}
               <motion.div
                 className="flex-shrink-0 w-12 h-12 rounded-lg bg-surface/50 flex items-center justify-center"
-                whileHover={shouldReduceMotion ? {} : jitter.hover}
+                whileHover={shouldReduceMotion ? {} : jitter.hover as any}
               >
                 <Icon className="w-6 h-6 text-electric" aria-hidden="true" />
               </motion.div>
@@ -128,7 +128,7 @@ export function PlatformList({ links }: PlatformListProps) {
                 {/* Copy Link Button */}
                 <motion.button
                   onClick={(e) => handleCopy(link.url, link.platform, e)}
-                  whileHover={shouldReduceMotion ? {} : subtleJitter.hover}
+                  whileHover={shouldReduceMotion ? {} : subtleJitter.hover as any}
                   className={cn(
                     "p-2 rounded-lg transition-colors focus-ring",
                     "text-muted hover:text-electric hover:bg-surface/50",

@@ -133,7 +133,7 @@ export function SiteHeader() {
           <div className="relative flex items-center justify-between h-16">
             {/* Logo */}
             <motion.div
-              whileHover={shouldReduceMotion ? {} : subtleJitter.hover}
+              whileHover={shouldReduceMotion ? {} : subtleJitter.hover as any}
             >
               <Link
                 href={addLocaleToPath("/", currentLocale)}
@@ -153,7 +153,7 @@ export function SiteHeader() {
                 return (
                   <motion.div
                     key={item.href}
-                    whileHover={shouldReduceMotion ? {} : subtleJitter.hover}
+                    whileHover={shouldReduceMotion ? {} : subtleJitter.hover as any}
                   >
                     <Link
                       href={localePath}

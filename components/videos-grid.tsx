@@ -81,7 +81,7 @@ export function VideosGrid({ videos }: VideosGridProps) {
             {isExpanded && (
               <motion.button
                 onClick={handleVideoClose}
-                whileHover={shouldReduceMotion ? {} : jitter.hover}
+                whileHover={shouldReduceMotion ? {} : jitter.hover as any}
                 className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/80 hover:bg-black/90 text-text transition-colors focus-ring"
                 aria-label="Close video"
               >
@@ -99,7 +99,7 @@ export function VideosGrid({ videos }: VideosGridProps) {
             />
             <motion.h3
               className="text-lg font-display font-semibold text-text mb-2"
-              whileHover={shouldReduceMotion ? {} : subtleJitter.hover}
+              whileHover={shouldReduceMotion ? {} : subtleJitter.hover as any}
             >
               {video.title}
             </motion.h3>

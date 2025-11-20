@@ -7,6 +7,7 @@ import { useTranslations } from "@/hooks/use-translations";
 
 export function Pillars() {
   const { t } = useTranslations();
+  const shouldReduceMotion = useReducedMotion();
   
   const pillars = [
     {
@@ -37,7 +38,6 @@ export function Pillars() {
         >
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
-            const shouldReduceMotion = useReducedMotion();
             return (
               <motion.div
                 key={pillar.title}
@@ -46,7 +46,7 @@ export function Pillars() {
               >
                 <motion.div
                   className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/10 text-gold mb-6"
-                  whileHover={shouldReduceMotion ? {} : jitter.hover}
+                  whileHover={shouldReduceMotion ? {} : jitter.hover as any}
                   animate={shouldReduceMotion ? {} : continuousJitter}
                 >
                   <Icon className="w-8 h-8" aria-hidden="true" />
